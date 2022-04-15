@@ -2,7 +2,8 @@ import os
 import os.path
 import shutil
 
-# Version 1.1 - Added JS / DOM
+
+# Version 1.5 - Fix + Add Readme
 
 def dossier():
     os.mkdir("Projet")
@@ -13,13 +14,15 @@ def dossier():
 
 def css():
     css = open("style.css", "w")
-    css = css.write("/* RESET 2022 */\nhtml{\n\tfont-size:62.5%;\n\tscroll-behavior:smooth;\n}\nbody{"
-                    "\n\tfont-size:1.6rem;\n\tmargin:0\n}\nsection,figure,h1,h2,h3,h4,h5,h6,ol,p,"
-                    "ul{\n\tmargin:0;\n\tpadding:0;\n\tlist-style:none;\n}\na{"
-                    "\n\tcolor:#000;\n\ttext-decoration:none;\n}\n*{ "
-                    "\n\tbox-sizing:border-box;\n}\nbutton{"
-                    "\n\tpadding:0;\n\tborder:0;\n\tbackground-color:transparent;\n}\n/* "
-                    "HEADER */")  # reset
+    css.write("/* RESET 2022 */\nhtml{\n\tfont-size:62.5%;\n\tscroll-behavior:smooth;\n}\nbody{"
+              "\n\tfont-size:1.6rem;\n\tmargin:0;\n}\nsection,figure,h1,h2,h3,h4,h5,h6,ol,p,"
+              "ul{\n\tmargin:0;\n\tpadding:0;\n\tlist-style:none;\n}\na{"
+              "\n\tcolor:#000;\n\ttext-decoration:none;\n}\n*{ "
+              "\n\tbox-sizing:border-box;\n}\nbutton{"
+              "\n\tpadding:0;\n\tborder:0;\n\tbackground-color:transparent;\n} "
+              "\nimg{\n\tdisplay: inline-block;\n\twidth: 100%;\n\theight: 100%;\n\tobject-fit: cover;\n}\n/*"
+              "HEADER */\n\n\n\n/* MAIN */\n\n\n\n/* FOOTER */\n\n\n\n/* @Copyright - PhilDaiguille*/")  # reset
+    css.close()
     shutil.move("style.css", "Projet/css/style.css")
 
 
@@ -28,10 +31,20 @@ def file():
     html.close()
     shutil.move("index.html", "Projet/index.html")
 
+    gitignore = open(".gitignore", "w")
+    gitignore.close()
+    shutil.move(".gitignore", "Projet/.gitignore")
+
+    readme = open("readme.md", "w")
+    readme.write("# Projet WEB \n\n## Description :\n\n## [Voir le lien]()\n\n## Utilisation :\n\n")
+    readme.close()
+    shutil.move("readme.md", "Projet/readme.md")
+
     css()
 
     js = open("app.js", "w")
-    js = js.write('document.addEventListener("DOMContentLoaded", () => {\n\t/*APP*/\n\tconsole.log("charged")\n});')
+    js.write('document.addEventListener("DOMContentLoaded", () => {\n\t/*APP*/\n\tconsole.log("charged")\n});')
+    js.close()
     shutil.move("app.js", "Projet/js/app.js")
 
 
