@@ -3,7 +3,7 @@
 Script pour créer d'un répertoire pour un site web
 
 ## Résultat du script 
-![Resultat](rendu.png)
+![Resultat](Rendu.png)
 
 
 ### Release note 
