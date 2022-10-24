@@ -28,6 +28,12 @@ def css():
 
 def file():
     html = open("index.html", "w")
+    html.write('<!DOCTYPE html>\n<html lang="fr">\n<head>\n\t<meta charset="UTF-8">\n\t<meta '
+               'http-equiv="X-UA-Compatible" content="IE=edge">\n\t<meta name="viewport" content="width=device-width, '
+               'initial-scale=1.0">\n\t<title>Document</title>\n\t<link rel="stylesheet" '
+               'href="./css/style.css">\n</head>\n\n<body>\n<header>\n<h1>Projet</h1>\n</header>\n<main>\n</main>\n'
+               '<footer>\n\t<p '
+               '>&copy; - 2022 -  </p>\n</footer>\n<script src="./js/app.js"></script>\n</body>\n\n</html>')
     html.close()
     shutil.move("index.html", "Projet/index.html")
 
