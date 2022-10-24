@@ -10,7 +10,7 @@ Script pour créer d'un répertoire pour un site web
 <br>
 Patch Version 1.4 :
 
-        Implémentation d'un .EXE et update script
+    Implémentation d'un .EXE et update script
 
 Patch Version 1.3 : 
 
